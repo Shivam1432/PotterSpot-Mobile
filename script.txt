@@ -1,0 +1,563 @@
+<html>
+<head>
+    <title>PotterSpot</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="myscripts.js"></script>
+<style>
+ h3 {
+    font-family:'Garamond', serif;
+    text-align: center;
+    color:#8B4726;
+}
+h2{
+    font-family:'Garamond', serif;
+    text-align: center;
+    color:#8B4726;
+}
+h4
+{
+    font-family:'Garamond', serif;
+    text-align: center;
+    color:#8B4726;
+    margin-top:25px;
+}
+li {
+    font-family:'Garamond';
+    font-size: 2em;
+}
+input[type=radio] {
+    border: 0px;
+    width: 20px;
+    height: 2em;
+}
+p {
+    font-family:"Garamond", serif;
+    width:80%;
+    margin-right:10%;
+    margin-left:10%;
+}
+body{
+    background-image: url("1map.jpg");
+    background-position: relative;
+}
+nav{
+    color:black;
+    font-family: aquiline;
+    margin-top:0%;
+    height: 50px;
+}
+a:visited {
+    text-decoration: none;
+}
+ul li{
+    list-style-type: none;
+}
+.modal{
+   background-image:url("navbarbg1.jpg");
+}
+.modal-body{
+
+}
+.logo{
+    text-align:center;
+    margin-right:25px;
+    height:100px;
+    width:100px;
+}
+.head1{
+    font-size:80px;
+    color:#DAA520;
+    font-family: Garamond;
+    text-align: center;
+    margin-left:0px;
+    margin-right:100px;
+}
+.subtitle
+{
+    font-family: Garamond;
+    text-align: center;
+    font-size:25px;
+    margin-right:;
+    margin-left:35%;
+    margin-right:35%;
+    font-weight: bolder;
+    color:black;
+}
+.h{
+    width:100%;
+    height:160px;
+    margin-top:0px;
+    background-color:darkred;
+    background-position: absolute;
+}
+.contains{
+    width:80%;
+    margin-left:10%;
+    margin-right:10%;
+    background-color:#FFEFD5;
+    height:auto;
+}
+.layer{
+    margin-top:5%;
+    background-color: #8B4726;
+    width:80%;
+    margin-left:10%;
+    margin-right:10%;
+    height: 10px;
+}
+.layer1{
+    margin-top:5%;
+    background-color: #8B4726;
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+    height: 10px;
+}
+.media-border{
+    color:#8B4726;
+    border-width: 2px;
+}
+#slide1
+{
+   width:80%;
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:5%;
+    margin-bottom:5%;
+    align-items: center;
+    height:400px;
+}
+#slide2
+{
+   width:80%;
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:5%;
+    margin-bottom:5%;
+    height:400px;
+}
+#slide3
+{
+   width:80%;
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:5%;
+    margin-bottom:5%;
+    height:400px;
+}
+#fin{
+    margin-left:18%;
+}
+.caption
+{
+    margin-left:40%;
+}
+.result1{
+    background-color:#FFE4B5;
+    width:50%;
+    margin-left:25%;
+    margin-right: 25%;
+    margin-bottom: 5%;
+    height:100px;
+    text-align: center;
+}
+div.solid{
+    outline-width:5px;
+    outline-color:#FFE4B5;
+    outline-style: solid;
+    width:80%;
+    margin-left:10%;
+    margin-right:10%;
+    background-color:#8B4726;
+    padding:5px;
+    margin-top:5%;
+    margin-bottom:5%; 
+
+}
+/* Quiz Classes */
+ .quizContainer {
+
+    background-image:url("hogwarts.jpg");
+    border-radius: 6px;
+    padding-top: 5px;
+    position: relative;
+     padding-top: 5px;
+     margin-top:2.5%;
+    position: relative;
+    width:75%;
+    margin-left:12.5%;
+    margin-right:12.5%;
+    margin-bottom:8%;
+    margin-top:5%;
+}
+.nextButton {
+    box-shadow: 3px 3px 5px #888;
+    border-radius: 6px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    background-color: lightgrey;
+    /*clear: both;*/
+    color: red;
+    font-family:'Garamond';
+    position: relative;
+    margin:auto;
+    padding: 10px;
+}
+.question {
+    font-family:'Garamond';
+    font-size: 2em;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    border-radius: 6px;
+    background-color: lightgrey;
+    text-align: center;
+}
+.quizMessage {
+    background-color: peachpuff;
+    border-radius: 6px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    padding: 2px;
+    font-family:'Garamond';
+    color: red;
+}
+.choiceList {
+    font-family: "Garamond";
+    color: black;
+}
+.result {
+    width: 30%;
+    height: auto;
+    border-radius: 6px;
+    background-color: linen;
+    margin: auto;
+    text-align: center;
+    font-family:'Garamond', serif;
+}
+.modal-dialog{
+    background-color:#000080;
+}
+.modal-body{
+    background-color:#7B68EE;
+    background-image:url("bg1.jpg");
+    color:#66CD00;
+}
+.modal-header{
+    background-color:#66CD00;
+    background-image:url("bg1.jpg");
+}
+ol li{
+    color:#8B2500;
+}
+</style>
+<script>
+var questions = [{
+    question: "What is the platform number and name of station Harry needs to be at?",
+    choices: ["Platform 9 3/4, King's Stop", "Platform 9 3/4, King's Cross", "Platform 9 1/3,King's Cross", "Platform 9 3/4, Queen's Cross"],
+    correctAnswer: 1
+}, {
+    question: "Where does Hermione buy Crookshanks from?",
+    choices: ["Magical Pet Store", "Cat and Owls", "Eeylops Emporium", "Magical Menagerie"],
+    correctAnswer: 3
+}, {
+    question: "What is the name of Voldemort's and Dumbledore's mother respectively?",
+    choices: ["Merope, Jane", "Merope, Kendra", "Kendra, Narcissa", "Lily, Molly"],
+    correctAnswer: 1
+}, {
+    question: "What is the patronus form of Cho Chang?",
+    choices: ["Hare", "Otter", "Swan", "Horse"],
+    correctAnswer: 2
+}, {
+    question: "What is the codename for Lee Jordan on Potterwatch?",
+    choices: ["River", "Royal", "Romulus", "Rapier"],
+    correctAnswer: 0
+}];
+
+var currentQuestion = 0;
+var correctAnswers = 0;
+var quizOver = false;
+
+$(document).ready(function () {
+
+    // Display the first question
+    displayCurrentQuestion();
+    $(this).find(".quizMessage").hide();
+
+    // On clicking next, display the next question
+    $(this).find(".nextButton").on("click", function () {
+        if (!quizOver) {
+
+            value = $("input[type='radio']:checked").val();
+
+            if (value == undefined) {
+                $(document).find(".quizMessage").text("Please select an answer");
+                $(document).find(".quizMessage").show();
+            } else {
+                // TODO: Remove any message -> not sure if this is efficient to call this each time....
+                $(document).find(".quizMessage").hide();
+
+                if (value == questions[currentQuestion].correctAnswer) {
+                    correctAnswers++;
+                }
+
+                currentQuestion++; // Since we have already displayed the first question on DOM ready
+                if (currentQuestion < questions.length) {
+                    displayCurrentQuestion();
+                } else {
+                    displayScore();
+                    //                    $(document).find(".nextButton").toggle();
+                    //                    $(document).find(".playAgainButton").toggle();
+                    // Change the text in the next button to ask if user wants to play again
+                    $(document).find(".nextButton").text("Play Again?");
+                    quizOver = true;
+                }
+            }
+        } else { // quiz is over and clicked the next button (which now displays 'Play Again?'
+            quizOver = false;
+            $(document).find(".nextButton").text("Next Question");
+            resetQuiz();
+            displayCurrentQuestion();
+            hideScore();
+        }
+    });
+
+});
+
+// This displays the current question AND the choices
+function displayCurrentQuestion() {
+
+    console.log("In display current Question");
+
+    var question = questions[currentQuestion].question;
+    var questionClass = $(document).find(".quizContainer > .question");
+    var choiceList = $(document).find(".quizContainer > .choiceList");
+    var numChoices = questions[currentQuestion].choices.length;
+
+    // Set the questionClass text to the current question
+    $(questionClass).text(question);
+
+    // Remove all current <li> elements (if any)
+    $(choiceList).find("li").remove();
+
+    var choice;
+    for (i = 0; i < numChoices; i++) {
+        choice = questions[currentQuestion].choices[i];
+        $('<li><input type="radio" value=' + i + ' name="dynradio" />' + choice + '</li>').appendTo(choiceList);
+    }
+}
+
+function resetQuiz() {
+    currentQuestion = 0;
+    correctAnswers = 0;
+    hideScore();
+}
+
+function displayScore() {
+    $(document).find(".quizContainer > .result").text("You scored: " + correctAnswers + " out of: " + questions.length);
+    $(document).find(".quizContainer > .result").show();
+    if(correctAnswers/questions.length>.85)
+    {
+        document.getElementById("res").innerHTML="Congratulations! You are a certified PotterHead. The Sorting Hat might consider putting you in Ravenclaw.";
+    }
+    else if(correctAnswers/questions.length>.65 && correctAnswers/questions.length<=.85)
+    {
+        document.getElementById("res").innerHTML="That was an impressive attempt. But not one of the best. Maybe try again later?";
+    }
+    else if(correctAnswers/questions.length>.35 && correctAnswers/questions.length<=.65)
+    {
+        document.getElementById("res").innerHTML="That would have gotten you an A for Acceptable in your O.W.L.S. Maybe a Remembrall would help.";
+    }
+    else
+    {
+        document.getElementById("res").innerHTML="Maybe you're a Muggle who found this by accident. Anyways, Welcome to the Wizarding World";
+    }
+}
+
+function hideScore() {
+    $(document).find(".result").hide();
+}
+</script>
+</head>
+<body>
+    <div class="h">
+
+    <div class="head1" align="center"><img src="logo2.jpg" style="width:100px;">PotterSpot</div>
+    <div class="subtitle">Challenge your inner PotterHead</div>
+</div>
+<nav class="navbar navbar-expand-sm sticky-top justify-content-center" style="background-color: #FFE4B5">
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    
+    <li class="nav-item">
+      <a class="nav-link" href="#" style="margin-left:50px;margin-right: 50px;color:black;" data-toggle="modal"  data-target="#beasts">Beasts & Beings</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" style="margin-left:50px;margin-right: 50px;color:black;" data-toggle="modal" data-target="#potions">Potions</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#quiz" style="color:black;margin-left:50px;margin-right: 50px;">Quiz</a>
+    </li>
+     
+    <li class="nav-item">
+      <a class="nav-link" href="#" style="margin-left:50px;margin-right: 50px;color:black;" data-toggle="modal" data-target="#spells">Spells</a>
+    </li>
+  </ul>
+
+</nav>
+<div class="modal" id="spells">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Just a Swish and Flick</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <ol id="menu">
+  <li>Accio</li> <li>Aguamenti</li> <li>Alohomora</li>
+  <li>Bat-Bogey Hex</li>  <li>Confundo</li>   <li>Diffindo</li>
+  <li>Dissendium</li><li>Expecto Patronum</li><li>Expelliarmus</li>
+  <li>Impedimenta</li><li>Incendio</li><li>Legilimens</li>
+  <li>Levicorpus</li><li>Lumos</li><li>Morsmordre</li>
+  <li>Muffliato</li><li>Nox</li><li>Obliviate</li>
+  <li>Protego</li><li>Reparo</li><li>Riddikulus</li>
+  <li>Sectumsempra</li><li>Sonorus</li><li>Stupefy</li>
+  <li>Tarantallegra</li><li>Wingardium Leviosa</li>
+</ul>  
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="modal" id="beasts">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Has no one found out how to open the Monster Book of Monsters?</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <ol>
+            <li>Acromantula</li><li>Abraxan</li><li>Banshee</li><li>Basilisk</li><li>Blast-Ended Skrewt</li><li>Boggart</li>
+            <li>Bowtruckle</li><li>Centaur</li><li>Cornish Pixies</li><li>Dementor</li><li>Demiguise</li><li>Doxy</li><li>Dragon</li>
+            <li>Erumpent</li><li>Flobberworm</li><li>Ghoul</li> <li>Giant</li> <li>Giant Squid</li> <li>Gnome</li> <li>Goblin</li> <li>Grindylow</li> <li>Hippogriff</li> <li>House Elf</li> <li>Kappa</li> <li>Kelpie</li> <li>Kneazle</li> <li>Merpeople</li> <li>Mooncalf</li> <li>Mountain Troll</li>
+            <li>Murtlap</li> <li>Niffler</li> <li>Owl</li> <li>Phoenix</li> <li>Puffskein</li> <li>Pygmy Puff</li> <li>Sphinx</li> <li>Thestral</li>
+            <li>Thunderbird</li> <li>Unicorn</li> <li>Werewolf</li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="potions">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">There will be no foolish wand waving in this class</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <ol>
+            <li>Ageing Potion</li><li>Amortentia</li> <li>Antidote toCommon Poisons</li><li>Babbling Beverage</li> <li>Cure for Boils</li><li>Calming Draught</li> <li>Deflating Draught</li><li>Doxycide</li> <li>Draught of Peace</li>
+            <li>Felix Felicis</li> <li>Forgetfulness Potion</li> <li>Herbicide Potion</li><li>Pepperup Potion</li> <li>Polyjuice Potion</li> <li>Sleeping Draught</li><li>Strengthening Solution</li> <li>Swelling Solution</li> <li>Veritaserum</li> <li>Wit-Sharpening Potion</li><li>Wolfsbane</li>     
+        </ol>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="layer"> </div>
+<div class="contains">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active" id="slide1">
+      <h2>THE NEW HOTSPOT FOR POTTERHEADS</h2><br>
+      <p>Welcome to PotterSpot where you can find all the spells, potions and fantastic beasts you might have overlooked in the films and books loved by all.
+      Also do give our Harry Potter trivial quiz a try. The questions get interesting, more trivial and even more difficult as you keep going forward.<br><br> Rules are simple: Attempt the question before moving to next and try to do your best. Share and compare your score with your friends and see who is the Ultimate Harry Potter Fan(Books and Films).</p> <br><br><br><br><br>
+      <a href="#quiz" style="text-align: center;"><button style="font-family: Garamond;background-color:#8B4726;color:#FFEFD5;margin-left:435px;">TAKE &nbsp;QUIZ</button></a>
+    </div>
+    <div class="carousel-item" id="slide2">
+      <div class="media border p-3" style="border-color:#8B4726; border:2px;">
+    <img src="bk.jpg" class="mr-3 mt-3" style="width:183px;">
+    <div class="media-body">
+      <h3>Where the journey for Harry begins<br><small><i>Chapter 4, Keeper of Keys, Harry Potter and the Philosopher's Stone</i></small></h3>
+      <p>"You never told him? Never told him what was in the letter Dumbledore left fer him? I was there! I saw Dumbledore leave it, Dursley! An' you've kept it from him all these years?"<br>
+"Kept what from me?" said Harry eagerly.<br>
+"STOP! I FORBID YOU!" yelled Uncle Vernon in panic.<br>
+Aunt Petunia gave a gasp of horror.<br>
+"Ah, go boil yer heads, both of yeh," said Hagrid. "Harry--yer a wizard."<br>
+There was silence inside the hut. Only the sea and the whistling wind could be heard.</p>      
+    </div>
+  </div>
+    </div>
+    <div class="carousel-item" id="slide3">
+      <img src="slide3.png" style="width:618px;" id="fin"><br>
+      <div class="caption" style="margin-top:5%;color:black">Created by a dedicated fan.
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+
+</div>
+    <div class="solid" id="quiz">
+        <h2 align="center"style="color:lightgray;font-family: Garamond;font-size:60px;">Ultimate Harry Potter Trivial Quiz</h2>
+        <p align="center"style="font-family: Garamond;color:white;font-size:30px;">No duelling, just pure trivial knowledge</p>
+
+    <div class="quizContainer" >  
+        <div class="question"></div>
+        <ul class="choiceList"></ul>
+        <div class="quizMessage"></div>
+        <div class="result"></div>
+        <div class="nextButton"><a href="#">Next Question</a></div>
+        <br>
+    </div>
+</div>
+    <div class="layer1"> </div>
+    <h3>
+
+    <div class="result1" id="res">
+        <img src="resimg.png" style="width:60px;">Remarks by the Professors will be given here!
+       
+    </div>
+    </h3>
+</body>
